@@ -1,7 +1,8 @@
 
 import torch
 import bgflow as bg
-
+from bgflow.bgflow.distribution.normal import NormalDistribution, TruncatedNormalDistribution
+from bgflow.bgflow.distribution.distributions import UniformDistribution
 
 __all__ = ["make_distribution"]
 
@@ -22,7 +23,7 @@ def _make_uniform_distribution(shape, device=None, dtype=None, **kwargs):
     for key in defaults:
         if isinstance(defaults[key], torch.Tensor):
             defaults[key] = defaults[key].to(device=device, dtype=dtype)
-    return bg.UniformDistribution(**defaults)
+    return UniformDistribution(**defaults)
 
 
 def _make_normal_distribution(shape, device=None, dtype=None, **kwargs):
@@ -34,7 +35,7 @@ def _make_normal_distribution(shape, device=None, dtype=None, **kwargs):
     for key in defaults:
         if isinstance(defaults[key], torch.Tensor):
             defaults[key] = defaults[key].to(device=device, dtype=dtype)
-    return bg.NormalDistribution(**defaults)
+    return NormalDistribution(**defaults)
 
 
 def _make_truncated_normal_distribution(shape, device=None, dtype=None, **kwargs):
@@ -46,12 +47,12 @@ def _make_truncated_normal_distribution(shape, device=None, dtype=None, **kwargs
     for key in defaults:
         if isinstance(defaults[key], torch.Tensor):
             defaults[key] = defaults[key].to(device=device, dtype=dtype)
-    return bg.TruncatedNormalDistribution(**defaults)
+    return TruncatedNormalDistribution(**defaults)
 
 
 DISTRIBUTION_FACTORIES = {
-    bg.UniformDistribution: _make_uniform_distribution,
-    bg.NormalDistribution: _make_normal_distribution,
-    bg.TruncatedNormalDistribution: _make_truncated_normal_distribution
+    UniformDistribution: _make_uniform_distribution,
+    NormalDistribution: _make_normal_distribution,
+    TruncatedNormalDistribution: _make_truncated_normal_distribution
 }
 

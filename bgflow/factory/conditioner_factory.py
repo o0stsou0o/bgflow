@@ -5,6 +5,9 @@ from ..nn.periodic import WrapPeriodic
 import numpy as np
 import traceback
 import bgflow as bg
+from bgflow.bgflow.nn.flow.transformer.affine import AffineTransformer
+from bgflow.bgflow.nn.flow.transformer.spline import ConditionalSplineTransformer
+
 from torch.utils.checkpoint import checkpoint
 __all__ = ["make_conditioners"]
 
@@ -247,8 +250,8 @@ def _mixture_out_dims(what, shape_info, transformer_kwargs={}, num_components=8,
 
 
 CONDITIONER_OUT_DIMS = {
-    bg.ConditionalSplineTransformer: _spline_out_dims,
-    bg.AffineTransformer: _affine_out_dims,
+    ConditionalSplineTransformer: _spline_out_dims,
+    AffineTransformer: _affine_out_dims,
     #TODO bg.MixtureCDFTransformer: _mixture_out_dims
 }
 
