@@ -3,8 +3,8 @@ Toy systems that do not require an MD engine.
 """
 
 
-from bgflow.distribution.energy import Energy
-from bgflow.utils.geometry import distance_vectors, distances_from_vectors
+from bgflow.bgflow.distribution.energy import Energy
+from bgflow.bgflow.utils.geometry import distance_vectors, distances_from_vectors
 
 
 class DoubleWellEnergy(Energy):

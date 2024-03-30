@@ -1,8 +1,8 @@
 import os
 import numpy as np
-from bgmol.datasets.base import DataSet
-from bgmol.api import system_by_name
-from bgmol.tpl.hdf5 import HDF5TrajectoryFile, load_hdf5
+from bgflow.bgmol.datasets.base import DataSet
+from bgflow.bgmol.api import system_by_name
+from bgflow.bgmol.tpl.hdf5 import HDF5TrajectoryFile, load_hdf5
 
 __all__ = [
     "Ala2Implicit300", "Ala2Implicit1000", "Ala2Implicit1000Test",

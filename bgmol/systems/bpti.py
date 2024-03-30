@@ -1,7 +1,7 @@
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 _, unit, app = import_openmm()
-from bgmol.systems.base import OpenMMSystem
-from bgmol.util import get_data_file
+from bgflow.bgmol.systems.base import OpenMMSystem
+from bgflow.bgmol.util import get_data_file
 
 
 __all__ = ["ImplicitBPTI"]

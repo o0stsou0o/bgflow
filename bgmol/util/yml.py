@@ -5,7 +5,7 @@ YAML utilities
 import yaml
 from mdtraj.utils.unit import _str_to_unit
 
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 mm, unit, app = import_openmm()
 
 

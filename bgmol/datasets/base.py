@@ -2,7 +2,7 @@
 import os
 import numpy as np
 import mdtraj as md
-from bgmol.tpl.hdf5 import load_hdf5, HDF5TrajectoryFile
+from bgflow.bgmol.tpl.hdf5 import load_hdf5, HDF5TrajectoryFile
 
 from ..util.importing import import_openmm
 mm, unit, app = import_openmm()

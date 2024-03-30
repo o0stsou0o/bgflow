@@ -1,6 +1,6 @@
 
 import numpy as np
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 _, unit, _ = import_openmm()
 
 

@@ -2,7 +2,7 @@
 import os
 import numpy as np
 
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 mm, unit, app = import_openmm()
 
 from .base import DataSet

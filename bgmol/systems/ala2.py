@@ -1,7 +1,7 @@
 import os
 import tempfile
 import numpy as np
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 _, unit, app = import_openmm()
 import mdtraj as md
 from ..systems.base import OpenMMToolsTestSystem, OpenMMSystem

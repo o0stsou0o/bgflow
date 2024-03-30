@@ -3,10 +3,10 @@
 import os
 import tempfile
 from collections import OrderedDict
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 _, unit, app = import_openmm()
-from bgmol.systems import OpenMMSystem
-from bgmol.util import get_data_file
+from bgflow.bgmol.systems import OpenMMSystem
+from bgflow.bgmol.util import get_data_file
 from ..tpl.download import download_url
 
 __all__ = ["MiniPeptide", "AMINO_ACIDS"]

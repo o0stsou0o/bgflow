@@ -3,11 +3,11 @@ High-level API
 """
 
 import inspect
-from bgmol import systems
-from bgmol import datasets
-from bgmol.tpl import _openmmtools_testsystems
-from bgmol.systems import replicated
-from bgmol.util import BGMolException, yaml_load
+from bgflow.bgmol import systems
+from bgflow.bgmol import datasets
+from bgflow.bgmol.tpl import _openmmtools_testsystems
+from bgflow.bgmol.systems import replicated
+from bgflow.bgmol.util import BGMolException, yaml_load
 
 
 __all__ = ["system_by_name", "system_by_yaml", "list_datasets", "list_bgmol", "list_openmmtools_systems",

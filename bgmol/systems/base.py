@@ -11,9 +11,9 @@ mm, unit, app = import_openmm()
 
 import numpy as np
 
-from bgmol.util import yaml_dump, BGMolException
-from bgmol.tpl import _openmmtools_testsystems
-from bgmol.tpl.hdf5 import HDF5Reporter
+from bgflow.bgmol.util import yaml_dump, BGMolException
+from bgflow.bgmol.tpl import _openmmtools_testsystems
+from bgflow.bgmol.tpl.hdf5 import HDF5Reporter
 
 __all__ = ["BaseSystem", "OpenMMSystem", "OpenMMToolsTestSystem"]
 
@@ -218,7 +218,7 @@ class OpenMMSystem(BaseSystem):
             integrator = kwargs["integrator"]
         else:
             integrator = mm.LangevinIntegrator(temperature, 1., 0.002)
-        from bgflow.distribution.energy.openmm import OpenMMBridge, OpenMMEnergy
+        from bgflow.bgflow.distribution.energy.openmm import OpenMMBridge, OpenMMEnergy
         energy_bridge = OpenMMBridge(self.system, integrator, **kwargs)
         self._energy_model = OpenMMEnergy(self.dim, energy_bridge)
 

@@ -5,11 +5,11 @@ Systems for batch evaluation.
 import copy
 import numpy as np
 
-from bgmol.util.importing import import_openmm
+from bgflow.bgmol.util.importing import import_openmm
 mm, unit, app = import_openmm()
 
-from bgmol.util import BGMolException
-from bgmol.systems import BaseSystem
+from bgflow.bgmol.util import BGMolException
+from bgflow.bgmol.systems import BaseSystem
 
 __all__ = ["ReplicatedSystem"]
 
